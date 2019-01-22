@@ -5,10 +5,10 @@ const htmlWebpackPlugin = require('./htmlWebpack');
 
 
 const config = {
-  mode:  'production',
+  mode: 'production',
   output: {
-    path: path.resolve(__dirname, 'public'),
-    publicPath: '/'
+    path: path.resolve(__dirname, '../public'),
+    publicPath: '/',
   },
   plugins: [
     htmlWebpackPlugin({
@@ -17,8 +17,8 @@ const config = {
         conservativeCollapse: true,
         preserveLineBreaks: true,
         useShortDoctype: true,
-        html5: true
-      }
+        html5: true,
+      },
     }),
   ],
   devtool: 'source-map',

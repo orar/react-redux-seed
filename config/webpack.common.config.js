@@ -2,13 +2,13 @@ const path = require('path');
 const htmlWebpackPlugin = require('./htmlWebpack');
 
 module.exports = {
-  mode:  process.env.NODE_ENV,
+  mode: process.env.NODE_ENV,
   entry: './src',
   output: {
-    path: path.resolve(__dirname, 'public'),
-    publicPath: "/"
+    path: path.resolve(__dirname, '../public'),
+    publicPath: '/',
   },
-  devtool: "eval",
+  devtool: 'eval',
   module: {
     rules: [
       {
@@ -41,7 +41,7 @@ module.exports = {
               sourcemap: true,
             },
           },
-        ]
+        ],
       },
     ],
   },
@@ -50,9 +50,9 @@ module.exports = {
       path.resolve(__dirname, '../src'),
       path.resolve(__dirname, '../node_modules'),
     ],
-    extensions: [".js", ".json", ".jsx", ".scss"],
+    extensions: ['.js', '.json', '.jsx', '.scss'],
   },
   plugins: [
     htmlWebpackPlugin(),
-  ]
+  ],
 };
