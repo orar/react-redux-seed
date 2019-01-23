@@ -29,12 +29,14 @@ export default (preloadedState = {}) => {
 
   store.unsubscribeHistory = history.listen(updateAppLocation(store));
 
-  if (module.hot) {
-    module.hot.accept('./reducers', () => {
-      // eslint-disable-next-line global-require
-      const rootReducers = require('./reducers').default;
-      store.replaceReducer(rootReducers(store.moduleReducers));
-    });
+  if (process.env.NODE_ENV === 'development') {
+    if (module.hot) {
+      module.hot.accept('./reducers', () => {
+        // eslint-disable-next-line global-require
+        const hotReducers = require('./reducers').default;
+        store.replaceReducer(hotReducers(store.moduleReducers));
+      });
+    }
   }
 
   return store;

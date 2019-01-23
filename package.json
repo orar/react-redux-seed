@@ -1,5 +1,5 @@
 {
-  "name": "react-raw-webpack-seed",
+  "name": "react-redux-seed",
   "description": "Minimal React setup with raw Webpack bundler",
   "license": "MIT",
   "scripts": {
@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",

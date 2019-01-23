@@ -33,7 +33,7 @@ class App extends Component<Props> {
           <Router history={history}>
             <NotFoundRouter>
               <Switch>
-                <Route path="/" render={() => <div>Im coming for you, Future!</div>} />
+                <Route exact path="/" render={() => <div>Im coming for you, Future!</div>} />
                 <Route path="/eln" render={() => <div>Hi, my name is Eln</div>} />
                 <RedirectToNotFound />
               </Switch>

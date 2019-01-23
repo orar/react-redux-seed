@@ -14,12 +14,12 @@ const config = {
   ],
   devServer: {
     port: 3000,
-    // publicPath: '/',
-    // historyApiFallback: true,
+    historyApiFallback: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    stats: 'minimal',
   },
 };
-console.log(merge(webpackCommonConfig, config));
+
 module.exports = merge(webpackCommonConfig, config);

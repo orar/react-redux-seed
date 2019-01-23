@@ -6,7 +6,7 @@ if (/^(development|test)$/.test(process.env.NODE_ENV)) {
   apiBaseUrl = 'http://localhost:9000';
 }
 
-const csrfCookieName = '';
+const csrfCookieName = 'csrf_token';
 
 
 export default { apiBaseUrl, csrfCookieName };

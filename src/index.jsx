@@ -4,7 +4,7 @@ import React from 'react';
 import { AppContainer } from 'react-hot-loader';
 import { render } from 'react-dom';
 import App from './app/App';
-import createStore from './store/createStore';
+import { createStore } from './store';
 import './styles/core.scss';
 
 // Application mount element id
